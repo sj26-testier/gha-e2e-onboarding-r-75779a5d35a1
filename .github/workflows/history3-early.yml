@@ -1,0 +1,26 @@
+{
+  "name": "History3 early",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-two-linear"
+      ],
+      "paths": [
+        "early.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History3 early",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY3_COMPLETE variant=early event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

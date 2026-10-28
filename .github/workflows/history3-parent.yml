@@ -1,0 +1,26 @@
+{
+  "name": "History3 parent",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-two-linear"
+      ],
+      "paths": [
+        "parent.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History3 parent",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY3_COMPLETE variant=parent event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

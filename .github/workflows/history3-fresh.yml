@@ -1,0 +1,26 @@
+{
+  "name": "History3 fresh",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-two-linear"
+      ],
+      "paths": [
+        "fresh.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History3 fresh",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY3_COMPLETE variant=fresh event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

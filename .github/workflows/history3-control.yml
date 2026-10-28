@@ -1,0 +1,23 @@
+{
+  "name": "History3 control",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-two-linear"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History3 control",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY3_COMPLETE variant=control event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}

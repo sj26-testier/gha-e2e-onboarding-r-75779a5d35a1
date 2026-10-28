@@ -1,0 +1,26 @@
+{
+  "name": "History3 never",
+  "on": {
+    "push": {
+      "branches": [
+        "hist-two-linear"
+      ],
+      "paths": [
+        "never.txt"
+      ]
+    }
+  },
+  "permissions": {},
+  "jobs": {
+    "marker": {
+      "name": "History3 never",
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 2,
+      "steps": [
+        {
+          "run": "echo HISTORY3_COMPLETE variant=never event=$GITHUB_EVENT_NAME sha=$GITHUB_SHA ref=$GITHUB_REF"
+        }
+      ]
+    }
+  }
+}
